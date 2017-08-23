@@ -131,7 +131,7 @@ void irSendData(int DriveMode)
             Serial.println(ThrottleCommand, DEC);
         }
 
-        delay(30);
+        delay(20);
     }
 
     // Now we have done looping through all the lights, and setting them all. 

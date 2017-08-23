@@ -375,29 +375,29 @@ void loop()
         GetIRRecvData(&results);
 
         // Drive Mode
-//        switch (irRecvData[0])
-//        {
-//           case '2':
-//               DriveMode = FWD;
-//               DriveModeCommand = FWD;
-//               Braking = false;
-//               break;
-//           case '3':
-//               DriveMode = REV;
-//               DriveModeCommand = REV;
-//               Braking = false;
-//               break;
-//           case '1':
-//               DriveMode = STOP;
-//               DriveModeCommand = STOP;
-//               Braking = false;
-//               break;
-//           case '4':
-//               DriveMode = FWD;
-//               DriveModeCommand = FWD;
-//               Braking = true;
-//               break;
-//        }
+        switch (irRecvData[0])
+        {
+           case '2':
+//             DriveMode = FWD;
+//             DriveModeCommand = FWD;
+               Braking = false;
+               break;
+           case '3':
+//             DriveMode = REV;
+//             DriveModeCommand = REV;
+               Braking = false;
+               break;
+           case '1':
+//             DriveMode = STOP;
+//             DriveModeCommand = STOP;
+               Braking = true;
+               break;
+           case '4':
+//             DriveMode = FWD;
+//             DriveModeCommand = FWD;
+               Braking = true;
+               break;
+        }
 
         // CH2 Position
         switch (irRecvData[1])
@@ -626,7 +626,7 @@ void loop()
         // COMMAND BRAKE
         // -------------------------------------------------------------------------------------------------------------------------------------------->           
         // If we are braking, turn on the brake light
-        Braking = ReturnBrakeFlag(DriveMode_Previous, DriveModeCommand);
+        // Braking = ReturnBrakeFlag(DriveMode_Previous, DriveModeCommand);
         if (Braking) DriveModeCommand = STOP;   //Braking also counts as a stop command since that is what we will eventually be doing
         
         // COMMAND FORWARD

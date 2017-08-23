@@ -119,8 +119,8 @@ int GetThrottleCommand()
     int ThrottleCommand;
     ThrottlePulse = pulseIn(ThrottleChannel_Pin, HIGH, ServoTimeout);  
 
-    //Serial.print("RX : ");
-    //Serial.println(ThrottlePulse);
+//    Serial.print("RX : ");
+//    Serial.println(ThrottlePulse);
     
     if ((ThrottlePulse == 0) || (ThrottlePulse > PulseMax_Bad) || (ThrottlePulse < PulseMin_Bad))
     {   // Timed out waiting for a signal, or measured a bad signal
